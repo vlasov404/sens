@@ -1,0 +1,7 @@
+sens: 127.0.0.1 [17/Jun/2015:13:55:43 +0300] "GET / HTTP/1.1" 200 12225 "-" "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0"
+sens: 127.0.0.1 [17/Jun/2015:13:55:44 +0300] "GET /assets/23b35bab/css/bootstrap.css HTTP/1.1" 200 147430 "http://sens/" "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0"
+sens: 127.0.0.1 [17/Jun/2015:13:55:44 +0300] "GET /css/site.css HTTP/1.1" 200 1364 "http://sens/" "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0"
+sens: 127.0.0.1 [17/Jun/2015:13:55:44 +0300] "GET /assets/bcac4d44/jquery.js HTTP/1.1" 200 247597 "http://sens/" "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0"
+sens: 127.0.0.1 [17/Jun/2015:13:55:44 +0300] "GET /assets/e9bc69d5/yii.js HTTP/1.1" 200 12929 "http://sens/" "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0"
+sens: 127.0.0.1 [17/Jun/2015:13:55:44 +0300] "GET /assets/23b35bab/js/bootstrap.js HTTP/1.1" 200 68890 "http://sens/" "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0"
+sens: 127.0.0.1 [17/Jun/2015:13:55:44 +0300] "GET /index.php?r=debug%2Fdefault%2Ftoolbar&tag=5581522fbbb15 HTTP/1.1" 200 19557 "http://sens/" "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0"
