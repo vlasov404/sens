@@ -4,6 +4,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use app\components\widgets\Alert;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -34,15 +35,18 @@ AppAsset::register($this);
             ]);
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => [
+                'items' => array_filter([
                     ['label' => 'Home', 'url' => ['/main/default/index']],
-                    ['label' => 'Contact', 'url' => ['/main/contact/index']],
+                    ['label' => 'Contact', 'url' => ['/contact/default/index']],
+                    Yii::$app->user->isGuest ?
+                        ['label' => 'Sign Up', 'url' => ['/user/default/signup']] :
+                        false,
                     Yii::$app->user->isGuest ?
                         ['label' => 'Login', 'url' => ['/user/default/login']] :
                         ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                             'url' => ['/user/default/logout'],
                             'linkOptions' => ['data-method' => 'post']],
-                ],
+                ]),
             ]);
             NavBar::end();
         ?>
@@ -51,6 +55,7 @@ AppAsset::register($this);
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>
+            <?= Alert::widget() ?>
             <?= $content ?>
         </div>
     </div>
