@@ -39,6 +39,16 @@ return [
         'log' => [
             'class' => 'yii\log\Dispatcher',
         ],
+        'i18n' => [
+            'translations' => [
+                'app*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'fileMap' => [
+                        'app' => 'app.php',
+                    ],
+                ],
+            ],
+        ],
     ],
     'params' => $params,
     'modules' => [
@@ -49,4 +59,5 @@ return [
             'class' => 'app\modules\user\Module',
         ],
     ],
+    'language' => 'ru'
 ];

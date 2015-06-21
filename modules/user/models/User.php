@@ -7,6 +7,7 @@ use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
+use app\modules\user\models\UserGroup;
 
 /**
  * This is the model class for table "sens_user".
@@ -73,11 +74,11 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             'id' => 'ID',
-            'created_at' => 'Создан',
-            'updated_at' => 'Обновлён',
-            'username' => 'Имя пользователя',
-            'email' => 'Email',
-            'status' => 'Статус',
+            'created_at' => Yii::t('app', 'USER_CREATED'),
+            'updated_at' => Yii::t('app', 'USER_UPDATED'),
+            'username' => Yii::t('app', 'USER_USERNAME'),
+            'email' => Yii::t('app', 'USER_EMAIL'),
+            'status' => Yii::t('app', 'USER_STATUS'),
         ];
     }
     
@@ -126,6 +127,11 @@ class User extends ActiveRecord implements IdentityInterface
     public function getAuthKey()
     {
         return $this->auth_key;
+    }
+    
+    public function getUserGroup($id){
+        $user = UserGroup::find()->where(['id' => '$id']);
+        print_r($user);die;
     }
  
     /**
@@ -264,4 +270,6 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->email_confirm_token = null;
     }
+    
+    
 }
