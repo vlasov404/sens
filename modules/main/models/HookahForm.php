@@ -84,6 +84,10 @@ class HookahForm extends Model
             'sturdiness' => Yii::t('app', 'HOOKAH_STURDINESS'),
             'params' => Yii::t('app', 'HOOKAH_PARAMS'),
             'message' => Yii::t('app', 'HOOKAH_MESSAGE'),
+            "fresh" => Yii::t('app', 'HOOKAH_PARAMS_FRESH'),
+            "sweet" => Yii::t('app', 'HOOKAH_PARAMS_SWEET'),
+            "sour" => Yii::t('app', 'HOOKAH_PARAMS_SOUR'),
+            "tart" => Yii::t('app', 'HOOKAH_PARAMS_TART'),
         ];
     }
 
@@ -107,6 +111,7 @@ class HookahForm extends Model
             
             $order->order = json_encode($order_data);
             $order->created_at=time();
+            $order->status='new';
             $order->save();
             
             return true;

@@ -39,9 +39,9 @@ class Order extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['created_at', 'order'], 'required'],
-            [['created_at', 'updated_at', 'status', 'hookah_man', 'manager', 'price'], 'integer'],
-            [['order_data', 'order'], 'string', 'max' => 255]
+            [['order'], 'required'],
+            [['created_at', 'updated_at', 'hookah_man', 'manager', 'price'], 'integer'],
+            [['order_data', 'order'], 'string']
         ];
     }
 

@@ -89,3 +89,56 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
+
+.halls h4 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.halls .item_tab {
+    padding:10px;
+    margin-left: -10px;
+}
+
+.halls .tab {
+    border:1px solid #ececec;
+    padding:15px;
+}
+
+.halls .tab .scroll_block{
+    height: 185px;
+    overflow: auto;
+}
+
+.halls .tab .order{
+    border:1px solid #ffbebe;
+    padding:5px 7px;
+    margin: 0 0 10px 0;
+    background: #ffeaea;
+}
+
+.halls .tab .order:last-child {
+    margin-bottom: 0;
+}
+
+.halls .tab .order .name {
+    font-weight: bold;
+}
+
+.halls .tab .order .name.margin {
+    margin-top: 10px;
+}
+
+.halls .tab .order.status_new{
+    border:1px solid #ffbebe;
+    background: #ffeaea;
+}
+
+.halls .tab .order.status_working{
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.halls .tab .order .btn {
+    margin: 10px 0 5px 0;
+}
